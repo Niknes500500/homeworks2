@@ -2,37 +2,32 @@ package com.nikita.homeworks.homework1;
 
 import java.util.Arrays;
 
-public class Median {
+public final class Median {
 
-    public static int median(int[] arr1) {
-        Arrays.sort(arr1);
-        int lengthArr = arr1.length;
-        int medianIndex;
-        int halfSum1 = lengthArr / 2 - 1;
-        int halfSum2 = lengthArr / 2;
-
-        if (lengthArr % 2 != 0) {
-            medianIndex = (lengthArr - 1) / 2;
-        } else {
-            medianIndex = (halfSum1 + halfSum2) / 2;
-        }
-
-        return arr1[medianIndex];
+    private Median() {
     }
 
-    public static double median(double[] arr2) {
-        Arrays.sort(arr2);
-        int lengthArr = arr2.length;
-        int medianIndex;
-        int halfSum1 = lengthArr / 2 - 1;
-        int halfSum2 = lengthArr / 2;
+    public static double median(int[] array1) {
 
-        if (lengthArr % 2 != 0) {
-            medianIndex = (lengthArr - 1) / 2;
-        } else {
-            medianIndex = (halfSum1 + halfSum2) / 2;
-        }
+        int[] clone = array1.clone();
+        Arrays.sort(clone);
+        double median;
+        median = (clone.length % 2 != 0)
+                ? clone[(clone.length - 1) / 2]
+                : (double) (clone[clone.length / 2 - 1] + clone[clone.length / 2]) / 2;
 
-        return arr2[medianIndex];
+        return median;
+    }
+
+    public static double median(double[] array2) {
+
+        double[] copy = array2.clone();
+        Arrays.sort(copy);
+        double median;
+        median = (copy.length % 2 != 0)
+                ? copy[(copy.length - 1) / 2]
+                : (copy[copy.length / 2 - 1] + copy[copy.length / 2]) / 2;
+
+        return median;
     }
 }

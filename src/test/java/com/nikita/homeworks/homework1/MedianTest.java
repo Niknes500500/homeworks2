@@ -7,25 +7,25 @@ public class MedianTest {
 
     @Test
     public void testIntMedian() {
-        float result = Median.median(new int[] { 5, 5, 5, 100, 5, 5, 5, 5 });
+        double result = Median.median(new int[] { 5, 5, 5, 100, 5, 5, 5, 5 });
         Assert.assertEquals(5, result, 0);
     }
 
     @Test
     public void testIntMedianOddNumber() {
-        float result = Median.median(new int[] {1, 5, 2, 8, 7});
+       double result = Median.median(new int[] {1, 5, 2, 8, 7});
         Assert.assertEquals(5, result, 0);
     }
 
     @Test
     public void testIntMedianEvenNumber() {
-        float result = Median.median(new int[] {1, 6, 2, 8, 7, 2});
+        double result = Median.median(new int[] {1, 6, 2, 8, 7, 2});
         Assert.assertEquals(4, result, 0);
     }
 
     @Test
     public void testIntMedianEvenAverage() {
-        float result = Median.median(new int[] {1, 2, 3, 4});
+       double result = Median.median(new int[] {1, 2, 3, 4});
         Assert.assertEquals(2.5, result, 0);
     }
 
