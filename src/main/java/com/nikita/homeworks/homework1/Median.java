@@ -7,26 +7,26 @@ public final class Median {
     private Median() {
     }
 
-    public static double median(int[] array1) {
+    public static double median(int[] array) {
 
-        int[] clone = array1.clone();
-        Arrays.sort(clone);
+        int[] clonedArr = array.clone();
+        Arrays.sort(clonedArr);
         double median;
-        median = (clone.length % 2 != 0)
-                ? clone[(clone.length - 1) / 2]
-                : (double) (clone[clone.length / 2 - 1] + clone[clone.length / 2]) / 2;
+        median = (clonedArr.length % 2 != 0)
+                ? clonedArr[(clonedArr.length - 1) / 2]
+                : (double) (clonedArr[clonedArr.length / 2 - 1] + clonedArr[clonedArr.length / 2]) / 2;
 
         return median;
     }
 
-    public static double median(double[] array2) {
+    public static double median(double[] input) {
 
-        double[] copy = array2.clone();
-        Arrays.sort(copy);
+        double[] inputCopy = input.clone();
+        Arrays.sort(inputCopy);
         double median;
-        median = (copy.length % 2 != 0)
-                ? copy[(copy.length - 1) / 2]
-                : (copy[copy.length / 2 - 1] + copy[copy.length / 2]) / 2;
+        median = (inputCopy.length % 2 != 0)
+                ? inputCopy[(inputCopy.length - 1) / 2]
+                : (inputCopy[inputCopy.length / 2 - 1] + inputCopy[inputCopy.length / 2]) / 2;
 
         return median;
     }
