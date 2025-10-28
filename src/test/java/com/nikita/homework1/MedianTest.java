@@ -1,4 +1,4 @@
-package com.nikita.homeworks.homework1;
+package com.nikita.homework1;
 
 import org.junit.Assert;
 import org.junit.Test;

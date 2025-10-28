@@ -1,6 +1,6 @@
-package com.nikita.homeworks.homework1;
+package com.nikita.homework1;
 
-import static com.nikita.homeworks.homework1.Median.median;
+import static com.nikita.homework1.Median.median;
 
 public class Main {
 
