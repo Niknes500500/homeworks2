@@ -7,14 +7,14 @@ public final class Median {
     private Median() {
     }
 
-    public static double median(int[] array) {
+    public static double median(int[] input) {
 
-        int[] clonedArr = array.clone();
-        Arrays.sort(clonedArr);
+        int[] inputCopy = input.clone();
+        Arrays.sort(inputCopy);
         double median;
-        median = (clonedArr.length % 2 != 0)
-                ? clonedArr[(clonedArr.length - 1) / 2]
-                : (double) (clonedArr[clonedArr.length / 2 - 1] + clonedArr[clonedArr.length / 2]) / 2;
+        median = (inputCopy.length % 2 != 0)
+                ? inputCopy[(inputCopy.length - 1) / 2]
+                : (double) (inputCopy[inputCopy.length / 2 - 1] + inputCopy[inputCopy.length / 2]) / 2;
 
         return median;
     }
