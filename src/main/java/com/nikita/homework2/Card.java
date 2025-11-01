@@ -3,7 +3,7 @@ package com.nikita.homework2;
 public class Card {
 
     private String ownerName;
-    double balance;
+    private double balance;
 
     public Card(String ownerName, double balance) {
         this.ownerName = ownerName;
@@ -22,21 +22,21 @@ public class Card {
         return ownerName;
     }
 
-    public void addTo(double replenishmentAmount) {
-        if (balance + replenishmentAmount > 1000) {
-            return;
-        }
-        balance = balance + replenishmentAmount;
+    public void increaseBalance(double replenishmentAmount) {
+        balance = balance += replenishmentAmount;
     }
 
-    public void withdrawal(double withdrawalAmount) {
+    public double withdrawBalance(double withdrawalAmount) {
         if (withdrawalAmount > balance) {
-            return;
+            return balance + 0;
         }
-        balance = balance - withdrawalAmount;
+        balance = balance -= withdrawalAmount;
+        return withdrawalAmount;
     }
 
-    public void balanceInAnotherCurrency(double exchangeRate) {
-        balance = balance / exchangeRate;
+    public double balanceInAnotherCurrency(double exchangeRate) {
+        double currencyBalance = getBalance() / exchangeRate;
+        return currencyBalance;
     }
 }
+
