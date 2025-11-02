@@ -2,8 +2,8 @@ package com.nikita.homework2;
 
 public class Card {
 
-    private String ownerName;
-    private double balance;
+    protected String ownerName;
+    protected double balance;
 
     public Card(String ownerName, double balance) {
         this.ownerName = ownerName;
@@ -34,8 +34,8 @@ public class Card {
         return withdrawalAmount;
     }
 
-    public double balanceInAnotherCurrency(double exchangeRate) {
-        return getBalance() / exchangeRate;
+    public double[] balanceInAnotherCurrency(double exchangeRateDollar, double exchangeRateEuro, double exchangeRateCNY) {
+        return new double[]{getBalance() / exchangeRateDollar, getBalance() / exchangeRateEuro, getBalance() * exchangeRateCNY};
     }
 }
 
