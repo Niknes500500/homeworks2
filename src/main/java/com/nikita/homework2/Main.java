@@ -1,0 +1,10 @@
+package com.nikita.homework2;
+
+public class Main {
+    public static void main(String[] args) {
+        Card card007 = new Card("Egor", 100);
+        card007.increaseBalance(100);
+        card007.withdrawBalance(250);
+        System.out.println(card007.getBalance());
+    }
+}
