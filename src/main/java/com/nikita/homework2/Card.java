@@ -23,20 +23,19 @@ public class Card {
     }
 
     public void increaseBalance(double replenishmentAmount) {
-         balance += replenishmentAmount;
+        balance += replenishmentAmount;
     }
 
     public double withdrawBalance(double withdrawalAmount) {
         if (withdrawalAmount > balance) {
-            return balance + 0;
+            return 0;
         }
-         balance -= withdrawalAmount;
+        balance -= withdrawalAmount;
         return withdrawalAmount;
     }
 
     public double balanceInAnotherCurrency(double exchangeRate) {
-        double currencyBalance = getBalance() / exchangeRate;
-        return currencyBalance;
+        return getBalance() / exchangeRate;
     }
 }
 

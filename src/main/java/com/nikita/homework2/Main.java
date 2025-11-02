@@ -6,6 +6,5 @@ public class Main {
         card007.increaseBalance(100);
         card007.withdrawBalance(250);
         System.out.println(card007.getBalance());
-        System.out.println(card007.balanceInAnotherCurrency(3));
     }
 }
