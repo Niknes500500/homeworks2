@@ -1,6 +1,6 @@
 package com.nikita.homework2;
 
-public class DebitCard extends Card {
+public class DebitCard extends AbstractCard {
 
     public DebitCard(String ownerName, double balance) {
         super(ownerName, balance);
@@ -11,28 +11,13 @@ public class DebitCard extends Card {
     }
 
     @Override
-    public double getBalance() {
-        return super.getBalance();
-    }
-
-    @Override
-    public String getOwnerName() {
-        return super.getOwnerName();
-    }
-
-
-    @Override
-    public void increaseBalance(double replenishmentAmount) {
-        super.increaseBalance(replenishmentAmount);
-    }
-
-    @Override
     public double withdrawBalance(double withdrawalAmount) {
-        return super.withdrawBalance(withdrawalAmount);
-    }
+        System.out.println("with DEBIT");
 
-    @Override
-    public double[] balanceInAnotherCurrency(double exchangeRateDollar, double exchangeRateEuro, double exchangeRateCNY) {
-        return super.balanceInAnotherCurrency(exchangeRateDollar, exchangeRateEuro, exchangeRateCNY);
+        if (withdrawalAmount > getBalance()) {
+            return 0;
+        }
+        balance -= withdrawalAmount;
+        return withdrawalAmount;
     }
 }

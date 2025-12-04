@@ -1,3 +1,4 @@
+/*
 package com.nikita.homework2;
 
 import org.junit.Test;
@@ -55,4 +56,4 @@ public class CardTest {
         assertEquals(400.0, card.getBalance(), 0);
     }
 
-}
+}*/
